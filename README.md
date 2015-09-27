@@ -1,18 +1,17 @@
 Kad
 ===
 
-[![Build Status](https://travis-ci.org/gordonwritescode/kad.svg?branch=master)](https://travis-ci.org/gordonwritescode/kad)
-[![Coverage Status](https://coveralls.io/repos/gordonwritescode/kad/badge.svg)](https://coveralls.io/r/gordonwritescode/kad)
-
-An implementation of the Kademlia DHT for Node.
+An updated implementation of the Kademlia DHT for Node which supports IPv6.
 
 ## Usage
 
-Install with NPM.
+Install with NPM. It's unlikely I'm going to push this to NPM's repos, but you can fetch it directly from github, like so:
 
 ```bash
-npm install kad
+npm install --save git://github.com/ansuz/kad-ipv6#e09367cc1a9473405ef4aea3cc74746232f369b0
 ```
+
+Just check that you're using the latest commit hash.
 
 Create your node, plugin your storage adapter, and join the network.
 
@@ -58,6 +57,8 @@ var dht = kademlia({
 });
 ```
 
+Currently, the only transport which supports IPv6 is UDP. TCP6 support should be coming soon.
+
 Implementing other transports should be possible. Pull requests welcome!
 
 ## Persistence
@@ -96,7 +97,6 @@ nat.portMapping({
   });
 });
 ```
-
 
 ## License
 
