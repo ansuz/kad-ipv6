@@ -27,7 +27,7 @@
     "colors": "^1.0.3",
     "hat": "0.0.3",
     "lodash": "^3.6.0",
-    "merge": "^1.2.0",
+    "merge": "^1.2.0"
   },
   "devDependencies": {
     "chai": "^2.2.0",
